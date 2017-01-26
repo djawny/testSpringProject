@@ -1,9 +1,6 @@
 package pl.sda;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MyController {
@@ -16,5 +13,16 @@ public class MyController {
     @RequestMapping("/hello2/{name}")
     public String hello2(@PathVariable("name") String name) {
         return "Hello World from Daniel to " + name;
+    }
+
+    @RequestMapping("/customer")
+    public Customer customer(){
+        Customer customer = new Customer("Jakub", "Kowalski");
+        return customer;
+    }
+
+    @RequestMapping(value = "/message", method = RequestMethod.POST)
+    public void message(@RequestBody String message){
+        System.out.println("podana wiadomość to: " + message);
     }
 }
