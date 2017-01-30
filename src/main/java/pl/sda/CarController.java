@@ -25,7 +25,6 @@ public class CarController {
         return carService.getById(id);
     }
 
-
     @RequestMapping("/car")
 //    public Car getById(@PathVariable String id){
     public List<Car> getByBrand(@RequestParam("brand") String brand)  {
