@@ -7,6 +7,17 @@ public class Car {
     private int year;
     private String color;
 
+    public Car() {
+    }
+
+    public Car(String id, String brand, String model, int year, String color) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+    }
+
     public String getId() {
         return id;
     }

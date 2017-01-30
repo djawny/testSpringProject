@@ -11,9 +11,9 @@ public class CarService {
     List<Car> cars = new ArrayList<>();
 
     public CarService() {
-        cars.add(new Car("Opel", "Vectra", 2001, "Silver", 5, "123"));
-        cars.add(new Car("Mazda", "6", 2005, "Black", 5, "234"));
-        cars.add(new Car("Ford", "Mondeo", 2010, "Red", 5, "345"));
+        cars.add(new Car("1", "Opel", "Vectra", 2001, "Silver"));
+        cars.add(new Car("2", "Mazda", "6", 2005, "Black"));
+        cars.add(new Car("3", "Ford", "Mondeo", 2010, "Red"));
     }
 
     public List<Car> getCars() {
